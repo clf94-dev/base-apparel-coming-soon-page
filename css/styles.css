@@ -1,0 +1,11 @@
+body {
+  background-image: image("images/bg-pattern-desktop.svg");
+}
+
+body .text-col {
+  padding: 3% 10%;
+}
+
+body .text-col .display {
+  display: none;
+}

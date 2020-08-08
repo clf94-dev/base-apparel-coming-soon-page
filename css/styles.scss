@@ -1,0 +1,18 @@
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red:hsl(0, 93%, 68%);
+$dark-grayish-red: hsl(0, 93%, 68%);
+$font-family: 'Josefin Sans',
+sans-serif;
+$font-weight3:300;
+$font-weight4:400;
+$font-weight6:600;
+body {
+    background-image: image("images/bg-pattern-desktop.svg");
+    .text-col {
+        padding: 3% 10%;
+        .display {
+            display: none;
+        }
+        .coming-soon {}
+    }
+}
