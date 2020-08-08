@@ -1,18 +1,120 @@
 $desaturated-red: hsl(0, 36%, 70%);
 $soft-red:hsl(0, 93%, 68%);
-$dark-grayish-red: hsl(0, 93%, 68%);
+$dark-grayish-red: hsl(0, 6%, 24%);
 $font-family: 'Josefin Sans',
 sans-serif;
 $font-weight3:300;
 $font-weight4:400;
 $font-weight6:600;
 body {
-    background-image: image("images/bg-pattern-desktop.svg");
-    .text-col {
-        padding: 3% 10%;
-        .display {
-            display: none;
+    .content {
+        .text-col {
+            padding: 3% 10%;
+            .logo {
+                margin: 5% auto;
+            }
+            .img-mobile {
+                position: relative;
+                left: 0;
+                padding-right: 0 !important;
+                width: 100%;
+                height: 400px;
+                overflow: hidden;
+                overflow-x: hidden;
+                .display {
+                    position: relative;
+                    right: 80px;
+                }
+            }
+            .title {
+                margin: 20% auto 0 auto;
+                font-family: $font-family;
+                font-size: 60px;
+                letter-spacing: 8px;
+                text-transform: uppercase;
+                font-weight: $font-weight3;
+                background: -webkit-linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .coming-soon {
+                margin-bottom: 3%;
+                font-family: $font-family;
+                font-size: 60px;
+                letter-spacing: 8px;
+                text-transform: uppercase;
+                font-weight: $font-weight6;
+                color: $dark-grayish-red;
+            }
+            p {
+                margin-bottom: 6%;
+                font-family: $font-family;
+                font-size: 20px;
+                line-height: 1.5rem;
+                background: -webkit-linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            input {
+                height: 50px;
+                border-radius: 25px;
+                border: 1px solid $soft-red;
+                width: 130%;
+                color: $desaturated-red;
+                &::placeholder {
+                    color: $desaturated-red;
+                }
+            }
+            .input-btn {
+                height: 50px;
+                border-radius: 25px;
+                width: 100%;
+                border: 1px solid $soft-red;
+                background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+            }
         }
-        .coming-soon {}
+        .desktop-img {
+            position: relative;
+            right: -134px;
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width:789px) {
+    .text-col {
+        position: absolute;
+        top: 60%;
+        padding: 5% 3% !important;
+        text-align: center;
+        input {
+            width: 100% !important;
+            margin-bottom: 3%;
+        }
+    }
+    .img-desktop-col {
+        display: none;
+    }
+}
+
+@media screen and(min-width:789px) {
+    .img-desktop-col {
+        display: block;
+    }
+    .img-mobile {
+        display: none;
+    }
+    .content {
+        position: absolute;
+        top: 0;
+        padding: 1%;
+        .row {
+            .text-col {
+                padding: 0 3%;
+                .img-mobile {
+                    margin-top: 3%;
+                }
+            }
+        }
     }
 }

@@ -31,25 +31,32 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid content">
         <div class="row ">
             <div class="col-md-6 text-col">
-                <img src="images/logo.svg" alt="logo">
-                <img class="display" src="images/hero-desktop.jpg" alt="hero">
-                <h1> We're <strong class="coming-soon">coming soon</strong> </h1>
+                <img src="images/logo.svg" alt="logo" class="logo">
+                <div class="container-fluid img-mobile">
+                    <img class="display" src="images/hero-desktop.jpg" alt="hero">
+                </div>
+                <h1 class="title"> We're </h1>
+                <h2 class="coming-soon">coming soon</h2>
                 <p> Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
                 </p>
 
                 <div class="row">
-                    <input type="text" name="email" id="email">
-                    <button class="input-btn btn-lg"><img src="images/icon-arrow.svg" alt=""></button>
+                    <div class="col-sm-9">
+                        <input type="text" name="email" id="email" placeholder="  Email Address">
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="input-btn btn-lg"><img src="images/icon-arrow.svg" alt=""></button>
+                    </div>
                 </div>
-
             </div>
-            <div class="col-md-6">
-                <img src="images/hero-desktop.jpg" alt="hero">
+            <div class="col-md-6 img-desktop-col">
+                <img src="images/hero-desktop.jpg" alt="hero" class="desktop-img">
             </div>
         </div>
+
     </div>
     <footer>
         <p class="attribution">
